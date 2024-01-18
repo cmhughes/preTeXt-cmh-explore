@@ -1,0 +1,22 @@
+name: cmh-deploy-gh-pages
+
+on:
+  push:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: install python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
+      - name: Install pretext
+        run: |
+          python -m ensurepip
+          python -m pip install --upgrade pip
+          python -m pip install --upgrade pretext
+      - name: load the "base actions/checkout" so as to access cmh-preTeXt-explore
+        uses: actions/checkout@v4
+      - name: cmh-build-html
+        run: pretext build web
