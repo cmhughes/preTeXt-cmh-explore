@@ -1,5 +1,7 @@
 name: cmh-deploy-gh-pages
-
+# reference
+#   https://github.com/PreTeXtBook/pretext-cli/blob/main/.github/workflows/codespace-template.yml
+#   https://github.com/PreTeXtBook/pretext-cli/blob/main/pretext/utils.py
 on:
   push:
 
