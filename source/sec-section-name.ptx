@@ -6,3 +6,12 @@
   <p> Text of section. here is some math content <m>y=x</m></p>
 
 </section>
+
+<section xml:id="cmh-second-section" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>cmh cross reference experiments</title>
+
+  <p>Let's reference <xref ref="sec-section-name"/></p>
+
+  <p>Let's custom reference <xref ref="sec-section-name" text="custom">cmh cross ref text</xref></p>
+
+</section>

@@ -1,6 +1,8 @@
-# PreTeXt Codespace
+# cmhughes PreTeXt explore
 
-Use this template repository to quickly start a new [PreTeXt](https://pretextbook.org) project entirely in the cloud, using GitHub Codespaces.  
+a codespace for cmhughes to explore PreTeXt. 
+
+html pages are deployed to https://cmhughes.github.io/preTeXt-cmh-explore/ 
 
 ## Instructions
 
