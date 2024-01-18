@@ -4,7 +4,7 @@ on:
   push:
 
 jobs:
-  deploy:
+  preTeXt-build-deploy:
     runs-on: ubuntu-latest
     steps:
       - name: install python
@@ -19,4 +19,6 @@ jobs:
       - name: load the "base actions/checkout" so as to access cmh-preTeXt-explore
         uses: actions/checkout@v4
       - name: cmh-build-html
-        run: pretext build web
+        run: |-
+          pretext build web
+          pretext deploy -u
