@@ -21,6 +21,6 @@ jobs:
       - name: load the "base actions/checkout" so as to access cmh-preTeXt-explore
         uses: actions/checkout@v4
       - name: cmh-build-html
-        run: |-
-          pretext build web
-          pretext deploy -u
+        run: pretext build web
+      - name: cmh-deploy-html
+        run: pretext deploy
