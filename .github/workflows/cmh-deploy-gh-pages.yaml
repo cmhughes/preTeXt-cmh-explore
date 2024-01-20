@@ -23,10 +23,23 @@ jobs:
           python -m pip install --upgrade pretext
       - name: load the "base actions/checkout" so as to access cmh-preTeXt-explore
         uses: actions/checkout@v4
-      - name: cmh-build-html
+      - name: cmh-build-HTML
         run: pretext build web
-      - name: cmh-deploy-html-NEW
+      - name: cmh-deploy-html
         # https://github.com/marketplace/actions/deploy-to-github-pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: output/web
+      - name: installing texlive full
+        uses: xu-cheng/texlive-action@v2
+        with:
+          scheme: full
+      - name: cmh-build-PDF
+        run: pretext build print
+      #
+      # https://stackoverflow.com/questions/57498605/github-actions-share-workspace-artifacts-between-jobs
+      #
+      - name: upload main.pdf as artifact
+        uses: actions/upload-artifact@master
+        with:
+          name: main.pdf
