@@ -33,7 +33,7 @@ jobs:
       - name: installing texlive full
         uses: dante-ev/latex-action@latest
         with:
-          entrypoint: pretext build print
+          entrypoint: ./pretext build print
       #
       # https://stackoverflow.com/questions/57498605/github-actions-share-workspace-artifacts-between-jobs
       #
