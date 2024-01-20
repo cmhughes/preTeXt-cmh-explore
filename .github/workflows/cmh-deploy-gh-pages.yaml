@@ -12,6 +12,10 @@ jobs:
   cmh-preTeXt-build:
     runs-on: ubuntu-latest
     steps:
+      - name: installing texlive full
+        uses: xu-cheng/texlive-action@v2
+        with:
+          scheme: full
       - name: install python
         uses: actions/setup-python@v4
         with:
@@ -30,13 +34,11 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: output/web
-      - name: installing texlive full
+      - name: cmh-build-pdf
         #
         # https://github.com/marketplace/actions/latex-compilation
         #
-        uses: dante-ev/latex-action@latest
-        with:
-          entrypoint: ./pdf-build.sh
+        pretext build print
       #
       # https://stackoverflow.com/questions/57498605/github-actions-share-workspace-artifacts-between-jobs
       #
