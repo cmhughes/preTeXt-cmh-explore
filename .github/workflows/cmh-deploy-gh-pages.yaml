@@ -5,6 +5,9 @@ name: cmh-deploy-gh-pages
 on:
   push:
 
+permissions:
+  contents: write
+
 jobs:
   cmh-preTeXt-build:
     runs-on: ubuntu-latest
@@ -22,7 +25,7 @@ jobs:
         uses: actions/checkout@v4
       - name: cmh-build-html
         run: pretext build web
-      - name: cmh-deploy-html
+      - name: cmh-deploy-html-NEW
         # https://github.com/marketplace/actions/deploy-to-github-pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
