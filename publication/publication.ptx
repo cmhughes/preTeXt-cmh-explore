@@ -71,6 +71,9 @@
     <!-- Set @formatted to "no" to remove formatting on worksheets: -->
     <worksheets formatted="yes" />
   </latex>
+  <targets>
+     <target name ="print" latex-engine="pdflatex"/>
+  </targets>
 
   <html>
     <platform host="web"/>
