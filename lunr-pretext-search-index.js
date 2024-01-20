@@ -16,7 +16,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.1",
   "title": "Section Title",
-  "body": " Section Title  Text of section. here is some math content  Let's reference  Let's custom reference cmh cross ref text  testing deployment on push  "
+  "body": " Section Title  Text of section. here is some math content  Let's reference  Let's custom reference cmh cross ref text  testing deployment on push, and again, Saturday January 20th, 2024  "
 },
 {
   "id": "backmatter-2",
