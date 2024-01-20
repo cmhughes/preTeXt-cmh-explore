@@ -23,4 +23,7 @@ jobs:
       - name: cmh-build-html
         run: pretext build web
       - name: cmh-deploy-html
-        run: pretext deploy
+        # https://github.com/marketplace/actions/deploy-to-github-pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: output/web
