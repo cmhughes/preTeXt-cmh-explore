@@ -38,7 +38,7 @@ jobs:
         #
         # https://github.com/marketplace/actions/latex-compilation
         #
-        pretext build print
+        run: pretext build print
       #
       # https://stackoverflow.com/questions/57498605/github-actions-share-workspace-artifacts-between-jobs
       #
