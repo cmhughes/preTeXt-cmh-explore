@@ -31,9 +31,7 @@ jobs:
         with:
           folder: output/web
       - name: installing texlive full
-        uses: xu-cheng/texlive-action@v2
-        with:
-          scheme: full
+        uses: dante-ev/latex-action@latest
       - name: cmh-build-PDF
         run: pretext build print
       #
