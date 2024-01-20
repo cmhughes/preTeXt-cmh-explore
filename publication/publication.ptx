@@ -72,7 +72,7 @@
     <worksheets formatted="yes" />
   </latex>
   <targets>
-     <target name ="print" latex-engine="pdflatex"/>
+     <target name ="print" pdf-method="pdflatex"/>
   </targets>
 
   <html>
