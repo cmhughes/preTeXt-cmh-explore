@@ -31,9 +31,12 @@ jobs:
         with:
           folder: output/web
       - name: installing texlive full
+        #
+        # https://github.com/marketplace/actions/latex-compilation
+        #
         uses: dante-ev/latex-action@latest
         with:
-          entrypoint: ./pretext build print
+          entrypoint: ./pdf-build.sh
       #
       # https://stackoverflow.com/questions/57498605/github-actions-share-workspace-artifacts-between-jobs
       #
