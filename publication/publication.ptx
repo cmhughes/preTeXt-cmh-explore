@@ -6,6 +6,17 @@
 <!-- of publication-file options, see                                     -->
 <!-- https://pretextbook.org/doc/guide/html/publisher-file-reference.html -->
 
+<project>
+  <targets>
+    <target name ="print" pdf-method="pdflatex">
+      <format>pdf</format>
+      <source>source / main . ptx </ source >
+      <publication>publication/publication.ptx</publication>
+      <output-dir>output/print</output-dir>
+    </target>
+ </targets>
+</project>
+
 <publication>
   <common>
     <!-- Level at which are html files generated (chapter/section/etc): -->
@@ -71,9 +82,6 @@
     <!-- Set @formatted to "no" to remove formatting on worksheets: -->
     <worksheets formatted="yes" />
   </latex>
-  <targets>
-     <target name ="print" pdf-method="pdflatex"/>
-  </targets>
 
   <html>
     <platform host="web"/>
