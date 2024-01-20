@@ -6,16 +6,6 @@
 <!-- of publication-file options, see                                     -->
 <!-- https://pretextbook.org/doc/guide/html/publisher-file-reference.html -->
 
-<project>
-  <targets>
-    <target name ="print" pdf-method="pdflatex">
-      <format>pdf</format>
-      <source>source / main . ptx </ source >
-      <publication>publication/publication.ptx</publication>
-      <output-dir>output/print</output-dir>
-    </target>
- </targets>
-</project>
 
 <publication>
   <common>
@@ -71,7 +61,7 @@
   <!-- for printing; set @sides="two" if the printing woudl be two- -->
   <!-- sided.  @pageref="yes/no" controls whether page number are   -->
   <!-- included in cross-references                                 -->
-  <latex print="no" sides="one" font-size="10" draft="no">
+  <latex print="no" sides="one" font-size="10" draft="no" pdf-method="pdflatex">
     <!-- Control text justification and bottom page behavior: -->
     <page right-alignment="flush" bottom-alignment="ragged" />
     <!-- Add content to \geometry{}: -->
