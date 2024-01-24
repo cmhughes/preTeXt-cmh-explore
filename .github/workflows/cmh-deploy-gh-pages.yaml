@@ -19,6 +19,7 @@ jobs:
           run: |
             pdflatex --version
             xelatex --version
+            echo "${HOME}/.local/bin" >> $GITHUB_PATH
       - name: install python
         uses: actions/setup-python@v4
         with:
