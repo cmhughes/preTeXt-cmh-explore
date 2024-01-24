@@ -23,14 +23,17 @@ jobs:
         uses: actions/setup-python@v4
         with:
           python-version: "3.11"
-          run: |
-            pdflatex --version
-            xelatex --version
+      - name: check latex executables
+        run: |
+          pdflatex --version
+          xelatex --version
       - name: Install pretext
         run: |
           python -m ensurepip
           python -m pip install --upgrade pip
           python -m pip install --upgrade pretext
+      - name: check latex executables, again
+        run: |
           pdflatex --version
           xelatex --version
       - name: load the "base actions/checkout" so as to access cmh-preTeXt-explore
