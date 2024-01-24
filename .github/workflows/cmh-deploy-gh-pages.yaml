@@ -16,6 +16,9 @@ jobs:
         uses: xu-cheng/texlive-action@v2
         with:
           scheme: full
+          run: |
+            pdflatex --version
+            xelatex --version
       - name: install python
         uses: actions/setup-python@v4
         with:
