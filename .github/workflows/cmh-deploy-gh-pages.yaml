@@ -12,19 +12,12 @@ jobs:
   cmh-preTeXt-build:
     runs-on: ubuntu-latest
     steps:
-      - name: installing texlive full
-        uses: xu-cheng/texlive-action@v2
+      - name: Install TeX Live
+        uses: zauguin/install-texlive@v3
         with:
-          scheme: full
-          run: |
-            pdflatex --version
-            which pdflatex
-            xelatex --version
-            which xelatex
-            echo $PATH
-            echo "$HOME/.opt/texlive/texdir/bin/x86_64-linuxmusl" >> $GITHUB_PATH
-            echo $GITHUB_PATH
-            echo $PATH
+          # List the required TeX Live packages in a separate file to allow reuse in
+          # different workflows.
+          package_file: .github/tl_packages
       - name: install python
         uses: actions/setup-python@v4
         with:
