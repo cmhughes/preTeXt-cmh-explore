@@ -21,7 +21,9 @@ jobs:
             which pdflatex
             xelatex --version
             which xelatex
+            echo $GITHUB_PATH
             echo "$HOME/opt/texlive/texdir/bin/x86_64-linuxmusl" >> $GITHUB_PATH
+            echo $GITHUB_PATH
       - name: install python
         uses: actions/setup-python@v4
         with:
