@@ -18,11 +18,15 @@ jobs:
           scheme: full
           run: |
            pdflatex --version
+      - name: check latex executables
+        run: |
+          pdflatex --version
+          xelatex --version
       - name: install python
         uses: actions/setup-python@v4
         with:
           python-version: "3.11"
-      - name: check latex executables
+      - name: check latex executables, again
         run: |
           pdflatex --version
           xelatex --version
@@ -31,10 +35,6 @@ jobs:
           python -m ensurepip
           python -m pip install --upgrade pip
           python -m pip install --upgrade pretext
-      - name: check latex executables, again
-        run: |
-          pdflatex --version
-          xelatex --version
       - name: load the "base actions/checkout" so as to access cmh-preTeXt-explore
         uses: actions/checkout@v4
       - name: cmh-build-HTML
