@@ -14,11 +14,11 @@ jobs:
     steps:
       - run: sudo apt-get update && sudo apt-get install ghostscript
       - name: Install TeX Live
-        uses: zauguin/install-texlive@v3
+        uses: xu-cheng/texlive-action@v2
         with:
-          # List the required TeX Live packages in a separate file to allow reuse in
-          # different workflows.
-          package_file: .github/tl_packages
+          scheme: full
+          run: |
+-            pdflatex --version
       - name: install python
         uses: actions/setup-python@v4
         with:
